@@ -14,17 +14,18 @@ import android.widget.TextView;
 
 public class FragmentB extends Fragment {
 
-    private TextView txvResult;
+    private TextView tResult;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_b,container,false);
-        txvResult=(TextView)view.findViewById(R.id.txvResult);
+        tResult=(TextView)view.findViewById(R.id.txvResultB);
         return view;
     }
 
     public void addNumbersInFragB(int x,int y){
-
+        int result=x+y;
+        tResult.setText("Result : "+result);
     }
 }
